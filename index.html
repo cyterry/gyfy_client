@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button onclick="openDevTools">打开</button>
+</body>
+<script type="text/javascript">
+function openDevTools(){
+	console.log('openDevTools')
+	const ipc = require('electron').ipcRenderer
+	ipc.send('openDevTools')
+}
+</script>
+</html>
